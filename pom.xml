@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.metamx</groupId>
+  <artifactId>health</artifactId>
+  <version>0.20.6-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <description>Health checks, metrics, and alerts</description>
+
+  <scm>
+    <connection>scm:git:ssh://git@github.com/facetdata/health.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/facetdata/health.git</developerConnection>
+    <url>http://github.com/facetdata/health</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <prerequisites>
+    <maven>3.3.9</maven>
+  </prerequisites>
+
+  <properties>
+    <scala.major.version>2.11</scala.major.version>
+    <scala.version>${scala.major.version}.8</scala.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <log4j2.version>2.6.2</log4j2.version>
+    <kafka.version>0.10.2.1</kafka.version>
+  </properties>
+
+  <modules>
+    <module>agent</module>
+    <module>core</module>
+    <module>hq</module>
+
+    <module>contrib/druid</module>
+    <module>contrib/kafka-common</module>
+    <module>contrib/kafka-cluster</module>
+    <module>contrib/kafka-consumer</module>
+    <module>contrib/ping</module>
+    <module>contrib/pipes</module>
+    <module>contrib/realtime</module>
+    <module>contrib/wagon</module>
+    <module>contrib/mesos</module>
+    <module>contrib/stateful-check</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <!-- sigar is required for com.metamx.metrics.SysMonitor
+         but currently only available in one of our third-party repos  -->
+        <groupId>org.hyperic</groupId>
+        <artifactId>sigar</artifactId>
+        <version>1.6.5.132</version>
+      </dependency>
+
+      <!-- Logging -->
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-1.2-api</artifactId>
+        <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-jcl</artifactId>
+        <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.lmax</groupId>
+        <artifactId>disruptor</artifactId>
+        <version>3.3.5</version>
+      </dependency>
+
+      <!-- MMX common -->
+      <dependency>
+        <groupId>com.metamx</groupId>
+        <artifactId>scala-util_${scala.major.version}</artifactId>
+        <version>1.13.3</version>
+      </dependency>
+      <dependency>
+        <groupId>com.metamx</groupId>
+        <artifactId>frdy_${scala.major.version}</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.metamx</groupId>
+        <artifactId>java-util</artifactId>
+        <version>0.28.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.metamx</groupId>
+        <artifactId>emitter</artifactId>
+        <version>0.4.5</version>
+      </dependency>
+      <dependency>
+        <groupId>com.metamx</groupId>
+        <artifactId>http-client</artifactId>
+        <version>1.1.0</version>
+      </dependency>
+
+      <!-- Apache HTTP -->
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore</artifactId>
+        <version>4.4.5</version>
+      </dependency>
+
+      <!-- ZooKeeper -->
+      <dependency>
+        <groupId>org.apache.zookeeper</groupId>
+        <artifactId>zookeeper</artifactId>
+        <version>3.4.10</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.jboss.netty</groupId>
+            <artifactId>netty</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>com.sun.jmx</groupId>
+            <artifactId>jmxri</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>com.sun.jdmk</groupId>
+            <artifactId>jmxtools</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>javax.jms</groupId>
+            <artifactId>jms</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- Kafka -->
+      <dependency>
+        <groupId>org.apache.kafka</groupId>
+        <artifactId>kafka_${scala.major.version}</artifactId>
+        <version>${kafka.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- Servlets: scalatra, jetty -->
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-servlet</artifactId>
+        <version>9.2.12.v20150709</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-server</artifactId>
+        <version>9.2.12.v20150709</version>
+      </dependency>
+      <dependency>
+        <groupId>org.scalatra</groupId>
+        <artifactId>scalatra_${scala.major.version}</artifactId>
+        <version>2.5.0</version>
+      </dependency>
+
+      <!-- Rainer -->
+      <dependency>
+        <groupId>com.metamx</groupId>
+        <artifactId>rainer_${scala.major.version}</artifactId>
+        <version>0.5.0</version>
+      </dependency>
+
+      <!-- Email -->
+      <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4.4</version>
+      </dependency>
+
+      <!-- Joda -->
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>2.9.7</version>
+      </dependency>
+
+      <!-- Serde -->
+      <dependency>
+        <groupId>org.yaml</groupId>
+        <artifactId>snakeyaml</artifactId>
+        <version>1.11</version>
+      </dependency>
+
+      <!-- Scala -->
+      <dependency>
+        <groupId>org.scala-lang</groupId>
+        <artifactId>scala-library</artifactId>
+        <version>${scala.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.scala-lang</groupId>
+        <artifactId>scala-actors</artifactId>
+        <version>${scala.version}</version>
+      </dependency>
+
+      <!-- Tests -->
+      <dependency>
+        <groupId>org.scalatest</groupId>
+        <artifactId>scalatest_${scala.major.version}</artifactId>
+        <version>2.2.6</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.6.1</version>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.10</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-help-plugin</artifactId>
+          <version>2.1.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.0.1</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>2.6</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>2.4.3</version>
+          <configuration>
+            <filters>
+              <filter>
+                <artifact>*:*</artifact>
+                <excludes>
+                  <exclude>META-INF/*.SF</exclude>
+                  <exclude>META-INF/*.DSA</exclude>
+                  <exclude>META-INF/*.RSA</exclude>
+                </excludes>
+              </filter>
+            </filters>
+          </configuration>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>shade</goal>
+              </goals>
+              <configuration>
+                <shadedArtifactAttached>true</shadedArtifactAttached>
+                <shadedClassifierName>selfcontained</shadedClassifierName>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.3</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.19.1</version>
+          <configuration>
+            <argLine>-Xmx512m</argLine>
+            <argLine>-Duser.timezone=UTC</argLine>
+            <systemPropertyVariables>
+              <user.timezone>UTC</user.timezone>
+            </systemPropertyVariables>
+            <includes>
+              <include>**/*Test.class</include>
+            </includes>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>net.alchim31.maven</groupId>
+          <artifactId>scala-maven-plugin</artifactId>
+          <version>3.2.2</version>
+          <configuration>
+            <args>
+              <arg>-unchecked</arg>
+              <arg>-deprecation</arg>
+            </args>
+            <jvmArgs>
+              <jvmArg>-Xmx1g</jvmArg>
+              <jvmArg>-XX:MaxPermSize=256m</jvmArg>
+            </jvmArgs>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>compile</goal>
+                <goal>testCompile</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.5.3</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

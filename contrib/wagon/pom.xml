@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>health-agent-wagon</artifactId>
+
+  <parent>
+    <groupId>com.metamx</groupId>
+    <artifactId>health</artifactId>
+    <version>0.20.6-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+
+  <scm>
+    <connection>scm:git:ssh://git@github.com/facetdata/health.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/facetdata/health.git</developerConnection>
+    <url>http://github.com/facetdata/health</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <dependencies>
+
+    <!-- Health -->
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-core</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-agent</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    
+    <!-- Agents -->
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-agent-druid</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+     <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-agent-kafka-consumer</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+     <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-agent-kafka-cluster</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-agent-ping</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-agent-pipes</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-agent-realtime</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>health-agent-mesos</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.facetdata</groupId>
+      <artifactId>health-agent-stateful-check</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+
+    <!-- Sigar -->
+    <dependency>
+      <groupId>org.hyperic</groupId>
+      <artifactId>sigar</artifactId>
+    </dependency>
+
+    <!-- MMX common -->
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>scala-util_${scala.major.version}</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>emitter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>http-client</artifactId>
+    </dependency>
+
+    <!-- Apache HTTP -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+    </dependency>
+
+    <!-- ZooKeeper -->
+    <dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+    </dependency>
+
+    <!-- Servlets: scalatra, jetty -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-servlet</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.scalatra</groupId>
+      <artifactId>scalatra_${scala.major.version}</artifactId>
+    </dependency>
+
+    <!-- Rainer -->
+    <dependency>
+      <groupId>com.metamx</groupId>
+      <artifactId>rainer_${scala.major.version}</artifactId>
+    </dependency>
+
+    <!-- Email -->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+    </dependency>
+
+    <!-- Joda -->
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+    </dependency>
+
+    <!-- Serde -->
+    <dependency>
+      <groupId>org.yaml</groupId>
+      <artifactId>snakeyaml</artifactId>
+    </dependency>
+
+    <!-- Scala -->
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-actors</artifactId>
+    </dependency>
+
+    <!-- Tests -->
+    <dependency>
+      <groupId>org.scalatest</groupId>
+      <artifactId>scalatest_${scala.major.version}</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

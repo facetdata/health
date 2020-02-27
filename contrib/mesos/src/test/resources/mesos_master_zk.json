@@ -1,0 +1,13 @@
+{
+  "address": {
+    "hostname": "mesos-master.example.com.",
+    "ip": "10.0.0.237",
+    "port": 5050
+  },
+  "hostname": "mesos-master.example.com.",
+  "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161",
+  "ip": 3980923820,
+  "pid": "master@10.0.0.237:5050",
+  "port": 5050,
+  "version": "0.28.0"
+}

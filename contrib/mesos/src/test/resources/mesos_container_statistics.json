@@ -1,0 +1,88 @@
+[
+  {
+    "container_id": "5b7480ae-4126-469b-93e3-2ce5b5523c2b",
+    "executor_id": "0",
+    "executor_name": "Command Executor (Task: 0) (Command: sh -c 'cd spark_2*;...')",
+    "framework_id": "27edc3f4-525c-4af0-a582-466bfb318852-4847",
+    "source": "0",
+    "statistics": {
+      "cpus_limit": 1.1,
+      "cpus_system_time_secs": 18.76,
+      "cpus_user_time_secs": 754.77,
+      "mem_anon_bytes": 2033029120,
+      "mem_cache_bytes": 3246305280,
+      "mem_critical_pressure_counter": 0,
+      "mem_file_bytes": 3246305280,
+      "mem_limit_bytes": 18383634432,
+      "mem_low_pressure_counter": 0,
+      "mem_mapped_file_bytes": 135475200,
+      "mem_medium_pressure_counter": 0,
+      "mem_rss_bytes": 2033029120,
+      "mem_total_bytes": 5279625216,
+      "mem_unevictable_bytes": 0,
+      "timestamp": 1482247667.85771
+    },
+    "status": {
+      "executor_pid": 20470
+    }
+  },
+  {
+    "container_id": "738fbe93-3af1-49ed-90e0-bf98c0a54bc8",
+    "executor_id": "default-rollout.214cf4bf-c56c-11e6-b02c-0ac1c5f241eb",
+    "executor_name": "Command Executor (Task: default-rollout.214cf4bf-c56c-11e6-b02c-0ac1c5f241eb) (Command: sh -c 'bin\/start.sh...')",
+    "framework_id": "15b78779-fe36-44ed-a81e-af043294ae08-4363",
+    "source": "default-rollout.214cf4bf-c56c-11e6-b02c-0ac1c5f241eb",
+    "statistics": {
+      "cpus_limit": 8000.1,
+      "cpus_system_time_secs": 4269.02,
+      "cpus_user_time_secs": 18971.95,
+      "mem_anon_bytes": 7101337600,
+      "mem_cache_bytes": 31092011008,
+      "mem_critical_pressure_counter": 0,
+      "mem_file_bytes": 31092011008,
+      "mem_limit_bytes": 62948114432,
+      "mem_low_pressure_counter": 0,
+      "mem_mapped_file_bytes": 4755107840,
+      "mem_medium_pressure_counter": 0,
+      "mem_rss_bytes": 7101337600,
+      "mem_total_bytes": 38193348608,
+      "mem_unevictable_bytes": 0,
+      "timestamp": 1482247667.85775
+    },
+    "status": {
+      "container_id": {
+        "value": "08feedd7-3b39-4be9-a660-d53b3745d177"
+      },
+      "executor_pid": 21022
+    }
+  },
+  {
+    "container_id": "738fbe93-3af1-49ed-90e0-bf98c0a54bc8",
+    "executor_id": "default-rollout.214cf4bf-c56c-11e6-b02c-0ac1c5f241eb",
+    "executor_name": "Command Executor (Task: default-rollout.214cf4bf-c56c-11e6-b02c-0ac1c5f241eb) (Command: sh -c 'bin\/start.sh...')",
+    "framework_id": "15b78779-fe36-44ed-a81e-af043294ae08-4363",
+    "source": "default-rollout.214cf4bf-c56c-11e6-b02c-0ac1c5f241eb",
+    "statistics": {
+      "cpus_limit": 8000.1,
+      "cpus_system_time_secs": 4269.02,
+      "cpus_user_time_secs": 18971.95,
+      "mem_anon_bytes": 7101337600,
+      "mem_cache_bytes": 31092011008,
+      "mem_critical_pressure_counter": 0,
+      "mem_file_bytes": 31092011008,
+      "mem_limit_bytes": 62948114432,
+      "mem_low_pressure_counter": 0,
+      "mem_mapped_file_bytes": 4755107840,
+      "mem_medium_pressure_counter": 0,
+      "mem_rss_bytes": 7101337600,
+      "mem_total_bytes": 38193348608,
+      "mem_unevictable_bytes": 0,
+      "timestamp": 1482247667.85775
+    },
+    "status": {
+      "container_id": {
+        "value": "08feedd7-3b39-4be9-a660-d53b3745d177"
+      }
+    }
+  }
+]

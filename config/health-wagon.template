@@ -1,0 +1,74 @@
+com.metamx.service = ${SERVICE}
+com.metamx.host    = ${IP_ADDR}
+com.metamx.port    = 8081
+
+
+# Emitter
+com.metamx.emitter.logging = true
+
+
+# Discovery
+health.zk.connect   = ${ZK_HOST}
+health.zk.timeout   = PT30S
+health.zk.discoPath = /test/discovery
+
+# Wagon
+health.wagon.pagerKey = ${PAGER_KEY}
+
+# DB
+health.config.db.uri      = jdbc:mysql://${MYSQL_HOST}/${MYSQL_DATABASE}
+health.config.db.user     = ${MYSQL_USER}
+health.config.db.password = ${MYSQL_PASSWORD}
+
+
+# Druid probing
+health.druid.table                         = health_datalag
+health.druid.zkPath                        = /health/config/data-lag
+health.druid.period                        = PT10M
+health.druid.alert.throttle                = PT1H
+health.druid.http.timeout                  = PT15S
+health.druid.loadstatus.alert.grace.period = PT25M
+health.druid.enable = false
+
+# Kafka cluster probing
+health.kafka.cluster.table  = health_kafka_cluster
+health.kafka.cluster.zkPath = /health/config/kafka-cluster
+health.kafka.cluster.period = PT10M
+health.kafka.cluster.enable = false
+
+# Kafka consumer offset probing
+health.kafka.consumer.table  = health_kafkaconsumer
+health.kafka.consumer.zkPath = /health/config/kafka-consumer
+health.kafka.consumer.period = PT10M
+health.kafka.consumer.enable = false
+
+# Mesos probing
+health.mesos.table  = health_mesos
+health.mesos.zkPath = /health/config/mesos
+health.mesos.period = PT5M
+health.mesos.enable = false
+
+# HTTP get probing
+health.ping.table  = health_ping
+health.ping.zkPath = /health/config/ping
+health.ping.period = PT1M
+health.ping.enable = false
+
+# Pipes probing
+health.pipes.table  = health_pipes_backlog
+health.pipes.zkPath = /health/config/pipes-backlog
+health.pipes.period = PT5M
+health.pipes.enable = false
+
+# Realtime backlog probing
+health.realtime.table = health_realtime
+health.realtime.zkPath = /health/config/realtime
+health.realtime.period = PT20S
+health.realtime.enable = false
+
+# Stateful checks
+health.statefulCheck.table = health_stateful_checks
+health.statefulCheck.zkPath = /health/config/health_stateful_checks
+health.statefulCheck.period = PT30S
+health.statefulCheck.timeout = PT15S
+health.statefulCheck.enable = false

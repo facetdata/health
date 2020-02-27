@@ -1,0 +1,32 @@
+#!/bin/bash -eu
+
+NAME=`cat pom.xml | grep '<artifactId>' | head -1 | sed 's_.*<artifactId>\([^<]*\)</artifactId>.*_\1_'`
+VERSION=`cat pom.xml | grep '<version>' | head -1 | sed 's_.*<version>\([^<]*\)</version>.*_\1_'`
+
+DIST=dist
+pushd `dirname $0` >/dev/null; BASE=`pwd`; popd >/dev/null
+TAR=$BASE/$NAME-$VERSION.tar.gz
+
+echo "Building $NAME-$VERSION"
+echo
+
+mvn clean package
+
+echo
+echo "Creating $TAR"
+
+shopt -s nullglob
+
+mkdir -p $DIST/lib-hq
+mkdir -p $DIST/lib-wagon
+cp hq/target/health-hq-$VERSION-selfcontained.jar $DIST/lib-hq/
+cp contrib/wagon/target/health-agent-wagon-$VERSION-selfcontained.jar $DIST/lib-wagon/
+
+shopt -u nullglob
+
+(
+  cd $DIST
+  rm -f $TAR
+  tar czf $TAR *
+  tar tf $TAR | perl -pe 's/^/  /'
+)

@@ -1,0 +1,746 @@
+{
+  "slaves": [
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S15",
+      "pid": "slave(1)@10.0.0.135:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S15.example.com.",
+      "registered_time": 1461618661.25427,
+      "reregistered_time": 1462222545.5235,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 2.0,
+        "disk": 0.0,
+        "mem": 26192.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 2.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 26192.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S14",
+      "pid": "slave(1)@10.0.0.194:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S14.example.com.",
+      "registered_time": 1461618659.41365,
+      "reregistered_time": 1462222545.41318,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 2.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 2.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S13",
+      "pid": "slave(1)@10.0.0.70:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S13.example.com.",
+      "registered_time": 1461618659.29647,
+      "reregistered_time": 1462222545.91913,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S12",
+      "pid": "slave(1)@10.0.0.189:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S12.example.com.",
+      "registered_time": 1461618659.2026,
+      "reregistered_time": 1462222545.4494,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S11",
+      "pid": "slave(1)@10.0.0.104:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S11.example.com.",
+      "registered_time": 1461618658.78048,
+      "reregistered_time": 1462222545.43174,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 2.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 2.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S2",
+      "pid": "slave(1)@10.0.0.197:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S2.example.com.",
+      "registered_time": 1461617882.99916,
+      "reregistered_time": 1462222549.03231,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.24.2",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S7",
+      "pid": "slave(1)@10.0.0.152:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S7.example.com.",
+      "registered_time": 1461618656.54183,
+      "reregistered_time": 1462222544.65181,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S3",
+      "pid": "slave(1)@10.0.0.172:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S3.example.com.",
+      "registered_time": 1461618345.80338,
+      "reregistered_time": 1462222545.15331,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 1.0,
+        "disk": 0.0,
+        "mem": 8528.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 1.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 8528.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S4",
+      "pid": "slave(1)@10.0.0.81:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S4.example.com.",
+      "registered_time": 1461618641.77949,
+      "reregistered_time": 1462222545.61828,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.27.0",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S5",
+      "pid": "slave(1)@10.0.0.121:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S5.example.com.",
+      "registered_time": 1461618649.77458,
+      "reregistered_time": 1462222545.09719,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S16",
+      "pid": "slave(1)@10.0.0.204:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S16.example.com.",
+      "registered_time": 1461962785.79555,
+      "reregistered_time": 1461962989.63989,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 2.0,
+        "disk": 0.0,
+        "mem": 15528.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145940.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 2.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 15528.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S6",
+      "pid": "slave(1)@10.0.0.109:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S6.example.com.",
+      "registered_time": 1461618654.5239,
+      "reregistered_time": 1462222545.26672,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S8",
+      "pid": "slave(1)@10.0.0.176:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S8.example.com.",
+      "registered_time": 1461618656.91225,
+      "reregistered_time": 1462222546.0662,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    },
+    {
+      "id": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S9",
+      "pid": "slave(1)@10.0.0.236:5051",
+      "hostname": "c780d5cb-f148-48a4-b37c-9dfaac2f2161-S9.example.com.",
+      "registered_time": 1461618657.38002,
+      "reregistered_time": 1462222545.27664,
+      "resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "used_resources": {
+        "cpus": 6.0,
+        "disk": 0.0,
+        "mem": 30720.0
+      },
+      "offered_resources": {
+        "cpus": 0.0,
+        "disk": 0.0,
+        "mem": 0.0
+      },
+      "reserved_resources": {},
+      "unreserved_resources": {
+        "cpus": 8.0,
+        "disk": 145941.0,
+        "mem": 30720.5,
+        "ports": "[21000-24000]"
+      },
+      "attributes": {},
+      "active": true,
+      "version": "0.28.1",
+      "reserved_resources_full": {},
+      "used_resources_full": [
+        {
+          "name": "cpus",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 6.0
+          },
+          "role": "*"
+        },
+        {
+          "name": "mem",
+          "type": "SCALAR",
+          "scalar": {
+            "value": 30720.0
+          },
+          "role": "*"
+        }
+      ],
+      "offered_resources_full": []
+    }
+  ]
+}

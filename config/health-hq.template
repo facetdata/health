@@ -1,0 +1,55 @@
+com.metamx.service = ${SERVICE}
+com.metamx.host    = ${IP_ADDR}
+com.metamx.port    = 8080
+
+
+# Emitter
+com.metamx.emitter.logging = true
+
+
+# Discovery
+health.zk.connect   = ${ZK_HOST}
+health.zk.timeout   = PT30S
+health.zk.discoPath = /test/discovery
+
+
+# DB
+health.config.db.uri      = jdbc:mysql://${MYSQL_HOST}/${MYSQL_DATABASE}
+health.config.db.user     = ${MYSQL_USER}
+health.config.db.password = ${MYSQL_PASSWORD}
+
+health.config.status.db.uri      = jdbc:postgresql://${POSTGRES_HOST}/${POSTGRES_DB}
+health.config.status.db.user     = ${POSTGRES_USER}
+health.config.status.db.password = ${POSTGRES_PASSWORD}
+
+
+# Kafka
+health.hq.processor.kafka.zookeeper.connect               = ${KAFKA_ZK}
+health.hq.processor.kafka.zookeeper.connection.timeout.ms = 1000000
+health.hq.processor.kafka.zookeeper.session.timeout.ms    = 30000
+
+health.hq.processor.kafka.group.id                = health-hq-dev
+health.hq.processor.kafka.auto.offset.reset       = largest
+health.hq.processor.kafka.fetch.message.max.bytes = 1048586
+    # 1024*1024 + 10 overhead
+
+
+# Heartbeats
+health.config.heartbeat.table  = heartbeats
+health.config.heartbeat.zkPath = /health-hq-dev/config/heartbeats
+
+health.heartbeat.rainer.key = config
+health.heartbeat.pagerKey = ${PAGER_KEY}
+
+
+# Event processors
+health.hq.processor.topic.statuses   = statuses
+health.hq.processor.topic.pagers     = pagers
+health.hq.processor.topic.alerts     = alerts
+health.hq.processor.topic.heartbeats = heartbeats
+
+
+# Notify inventory
+health.notify.inventory.key = config
+health.notify.inventory.table = notify_inventory
+health.notify.inventory.zkPath = /health-hq-dev/config/notify-inventory

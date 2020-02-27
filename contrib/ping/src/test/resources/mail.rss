@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed version="0.3" xmlns="http://purl.org/atom/ns#">
+    <title>Gmail - Inbox for user@example.com</title>
+    <tagline>New messages in your Gmail Inbox</tagline>
+    <fullcount>988</fullcount>
+    <link rel="alternate" href="http://mail.google.com/mail" type="text/html"/>
+    <modified>2014-06-12T14:22:52Z</modified>
+    <entry>
+        <title>HealthCheck triggered at 2014/06/12 11:00 UTC</title>
+        <summary>Hi User, At 2014/06/12 11:00 UTC, the alert named “HealthCheck” was triggered. If you&#39;d like to
+        </summary>
+        <link rel="alternate"
+              href="http://mail.google.com/mail?account_id=user@example.com&amp;message_id=146917385a096e46&amp;view=conv&amp;extsrc=atom"
+              type="text/html"/>
+        <modified>2014-06-12T19:00:05Z</modified>
+        <issued>%s</issued>
+        <id>tag:gmail.google.com,2004:1470732284109352518</id>
+        <author>
+            <name>Alerts</name>
+            <email>alerts@example.com</email>
+        </author>
+    </entry>
+    <entry>
+        <title>Big Data Consulting Marketplace in Harvard Innovation Lab</title>
+        <summary>Having trouble reading this email? View it in your browser. Harvard Innovation Lab Big Data</summary>
+        <link rel="alternate"
+              href="http://mail.google.com/mail?account_id=user@example.com&amp;message_id=14572a9f3788ea99&amp;view=conv&amp;extsrc=atom"
+              type="text/html"/>
+        <modified>2014-04-18T02:28:31Z</modified>
+        <issued>2014-04-18T02:28:31Z</issued>
+        <id>tag:gmail.google.com,2004:1465687067052272281</id>
+        <author>
+            <name>Experfy: Big Data C.</name>
+            <email>admin@example.org</email>
+        </author>
+    </entry>
+    <entry>
+        <title>Google Apps - Two Factor Authentication - Action Required!</title>
+        <summary>This is a friendly reminder that at the end of this week, two factor authentication will be enforced
+        </summary>
+        <link rel="alternate"
+              href="http://mail.google.com/mail?account_id=user@example.com&amp;message_id=14523df18cab5e31&amp;view=conv&amp;extsrc=atom"
+              type="text/html"/>
+        <modified>2014-04-02T19:16:34Z</modified>
+        <issued>2014-04-02T19:16:34Z</issued>
+        <id>tag:gmail.google.com,2004:1464300936505286193</id>
+        <author>
+            <name>Username</name>
+            <email>username@example.com</email>
+        </author>
+    </entry>
+</feed>

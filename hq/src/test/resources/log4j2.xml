@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout>
+        <Pattern>%d{ISO8601} %-5p [%t] %c - %X %m%n</Pattern>
+      </PatternLayout>
+    </Console>
+    <Console name="AlertsAppender" target="SYSTEM_OUT">
+      <JSONLayout properties="true" compact="true" eventEol="true"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger level="debug" name="com.metamx.health.hq.processors.AlertEventProcessor$">
+      <AppenderRef ref="AlertsAppender"/>
+    </Logger>
+    <Root level="info">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

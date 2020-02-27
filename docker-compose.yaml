@@ -1,0 +1,96 @@
+version: "3.6"
+services:
+
+  health-build:
+    build:
+      context: ./
+      target: build
+
+  health-wagon:
+    build:
+      context: ./
+      target: wagon
+    image: wagon:${TAG:-latest}
+    environment:
+      - APP_CONFIG_TEMPLATE=./conf/health-wagon.template
+      - MAIN_CLASS=com.metamx.health.wagon.WagonMain
+      - JAVA_OPTS=./conf/jvm-wagon.config
+
+      - SERVICE=health-wagon/local
+      - KAFKA_ZK=zookeeper/kafka
+      - ZK_HOST=zookeeper
+
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=metamx
+      - MYSQL_PASSWORD=joshua
+      - MYSQL_DATABASE=health
+
+      - PAGER_KEY=dummy
+    ports:
+      - 8081:8081
+    volumes:
+      - "./config:/apps/conf"
+    depends_on:
+      - zookeeper
+      - postgres 
+      - mysql
+      - health-hq
+
+  health-hq:
+    build:
+      context: ./
+      target: hq
+    image: hq:${TAG:-latest}
+    environment:
+      - APP_CONFIG_TEMPLATE=./conf/health-hq.template
+      - MAIN_CLASS=com.metamx.health.hq.HQMain
+      - JAVA_OPTS=./conf/jvm-hq.config
+
+      - SERVICE=health-hq/local
+      - KAFKA_ZK=zookeeper/kafka
+      - ZK_HOST=zookeeper
+
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=metamx
+      - MYSQL_PASSWORD=joshua
+      - MYSQL_DATABASE=health
+
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=metamx
+      - POSTGRES_PASSWORD=joshua
+      - POSTGRES_DB=health_hq
+
+      - PAGER_KEY=dummy
+    ports:
+      - 8080:8080
+    volumes:
+      - "./config:/apps/conf"
+    depends_on:
+      - zookeeper
+      - postgres
+      - mysql
+
+  mysql:
+    image: mysql:5.6
+    environment:
+        - MYSQL_ROOT_PASSWORD=iamrandom
+        - MYSQL_USER=metamx
+        - MYSQL_PASSWORD=joshua
+        - MYSQL_DATABASE=health
+    ports:
+      - 3306:3306
+
+  postgres:
+    image: postgres:9.5
+    environment:
+        - POSTGRES_USER=metamx
+        - POSTGRES_PASSWORD=joshua
+        - POSTGRES_DB=health_hq
+    ports:
+      - 5432:5432
+
+  zookeeper:
+    image: zookeeper:3.5
+    ports:
+      - 2181:2181
+
